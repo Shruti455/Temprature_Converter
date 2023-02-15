@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Temprature Converter Website | Shruti Chowdhury</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>Temprature Converter</header>
+			<section class="input-part">
+				<div class="content">
+					<label for="degree">Degree</label>
+					<input type="number" class="mb" id="degree" name="degree" placeholder="Enter Degree" required>
+
+					<label for="convertFrom">Degree Type <small>(Value Type)</small></label>
+					<select class="mb" id="convertFrom" name="convertFrom" onchange="temprature()" required>
+						<option value="" disabled selected>Select Type</option>
+						<option value="Celsius">Celsius</option>
+						<option value="Fahrenheit">Fahrenheit</option>
+						<option value="Kelvin">Kelvin</option>
+					</select>
+
+					<label for="resultIn">Convert In</label>
+					<select id="resultIn" name="resultIn" required>
+						<option value="" disabled selected>Select Convert Type</option>
+						<option value="Celsius" id="Celsius">Celsius</option>
+						<option value="Fahrenheit" id="Fahrenheit">Fahrenheit</option>
+						<option value="Kelvin" id="Kelvin">Kelvin</option>
+					</select>
+
+					<div class="separator"></div>
+					<input name="result" id="result" class="mb" placeholder="Result" disabled>
+					<button onclick="convert()">Convert</button>
+				</div>
+			</section>
+		</div>
+
+		<div class="footer">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by <a href="https://www.linkedin.com/in/shruti-chowdhury-b75156229/" target="_blank">Shruti Chowdhury</a></div>
+		<script src="script.js"></script>
+	</body>
+</html>
